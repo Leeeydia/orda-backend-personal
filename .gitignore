@@ -88,6 +88,10 @@ uploads/
 !/python/data/interim/b_output/.gitkeep
 !/python/data/interim/c_output/.gitkeep
 
+### Python ML outputs ###
+/python/ml/output/*
+!/python/ml/output/.gitkeep
+
 ### Optional large generated files ###
 /python/data/interim/**/*.gpkg
 /python/data/interim/**/*.tif
