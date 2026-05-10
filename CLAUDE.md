@@ -177,7 +177,7 @@ geom              GEOMETRY(LineString, 4326)
 
 ## 8. ML 추천 작업 정보
 
-### 8-1. course_features 테이블 (아직 미생성, 스키마 안)
+### 8-1. course_features 테이블 (마이그레이션 SQL 작성 완료 — DB 적용은 사용자 직접)
 
 > ⚠️ 아래 스키마는 **사용자가 결정한 안**이며, 실제 ML 실험 후 조정될 수 있음.
 
@@ -224,7 +224,7 @@ CREATE INDEX idx_course_features_summit ON course_features(summit_id);
 ### 8-3. 미확정 결정사항
 
 다음은 사용자 본인이 최종 확정 후 진행:
-- K-Means의 K값 (인계 문서에 K=7 적혀 있으나 실험으로 조정 가능)
+- K-Means의 K값 (인계 문서 K=7 → ML 실험 결과 **K=5 확정**)
 - 매칭 안 된 엣지 처리 (인계 문서: 평균값 imputation)
 - 추천 표시 위치 (인계 문서: 마이페이지)
 - 협업 필터링 폐기 여부 (사용자 5명, 데이터 부족)
