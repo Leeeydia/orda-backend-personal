@@ -233,7 +233,7 @@ class RecommendEngine:
 
         with self._conn.cursor() as cur:
             cur.execute(COURSE_BY_SUMMIT_SQL, (verified_summit_ids,))
-            visited_course_ids = {r[0] for r in cur.fetchall()}
+            visited_course_ids = {_nfc(r[0]) for r in cur.fetchall()}
 
         if not visited_course_ids:
             return []
