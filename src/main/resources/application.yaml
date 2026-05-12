@@ -1,6 +1,8 @@
 spring:
   application:
     name: backend
+  config:
+    import: optional:classpath:application-secret.yml
 
   datasource:
     url: ${DB_URL}
